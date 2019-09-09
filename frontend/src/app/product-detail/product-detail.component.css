@@ -1,0 +1,91 @@
+h1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+h1 > span {
+    font-size: 16px;
+    display: block;
+    padding: 5px 0 15px 0;
+    color: #999;
+}
+
+#brief {
+    line-height: 1.9;
+    margin: 0 0 1em;
+}
+
+.price-del {
+    font-size: 24px;
+    text-decoration: line-through;
+}
+
+.price-style {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    
+}
+
+.amount {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.desp-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desp-container > div {
+    width: 80%;
+}
+
+.product-summary {
+    padding: 40px 30px;
+}
+
+.shopping-container{
+    min-height: 280px;
+    margin-bottom: 30px;
+    padding: 35px 0;
+    background: #f5f5f5;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    color: #3d68b0;
+    border-bottom: 1px solid #ccc;
+}
+
+.section-inner {
+    margin-bottom: 20px;
+}
+
+.bottom_padding {
+    margin-bottom: 6vh;
+}
+
+.mat-grid-list {
+    font-family: 'Cabin',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.selection-container {
+    width: 80%;
+}
+
+option {
+    background-color:  #e6e6e6;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.amount {
+    font-weight: 500;
+}
+  
+
+.price-del {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.price-style {
+    color: #3d68b0;
+    font-size: 24px;
+    font-weight: 900;
+}

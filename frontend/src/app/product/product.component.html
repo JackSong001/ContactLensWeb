@@ -1,0 +1,25 @@
+<div class="images">
+    <a routerLink="/products/{{product.name}}">
+        <img
+            style="width: 100%"
+            src="../../assets/images/products/{{product.img[0]}}"
+            class="attachment-shop_catalog wp-post-image"
+            [alt]="product.name"
+        >
+    </a>
+</div>
+<div class="product-listing-info">
+    <a routerLink="/products/{{product.name}}">
+        <h3 [class.title]="isType">{{product.name}}</h3>
+    </a>
+    <span>
+        <div class="amount" [class]="product.dealPrice ? 'price-del' : 'price-style'">
+            <span>USD</span>
+            ${{product.fullPrice}}
+        </div>
+        <div class="amount price-style" *ngIf="product.dealPrice">
+            <span>USD</span>
+            ${{product.dealPrice}}
+        </div>
+    </span>
+</div>

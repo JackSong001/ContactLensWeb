@@ -1,0 +1,131 @@
+/*  Core CSS file - standardizes styles across browsers.  
+	Based on Yahoo's Developer Library CSS (reset.css and base.css) files.
+	LMG - Version 1.9 */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: inline;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+em {
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: bold;
+}
+
+caption, th {
+  text-align: left;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+abbr, acronym {
+  border: 0;
+}
+
+/* Some standard LMG styling */
+
+body {
+  font-size: 12px;
+  background-color: white;
+}
+
+.c-w1 blockquote, .c-w1 ul, .c-w1 ol {
+  margin: 0.25em 0 1em;
+}
+
+.c-w1 blockquote {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.c-w1 ol, .c-w1 ul {
+  margin-left: 2em;
+}
+
+.c-w1 ol li {
+  list-style: decimal outside;
+}
+
+.c-w1 ul li {
+  list-style: disc outside;
+}
+
+p, fieldset {
+  margin: 0 0 1em;
+}
+
+p, td {
+  line-height: 1.9;
+}
+
+iframe {
+  max-height: 100%
+}
+
+#content article li {
+  line-height: 1.9;
+}
+
+/* Navigation lists <ul class="nav"> */
+
+ul, li, ol, .nl, .nav, .nl li, .nav li, .nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* HTML5 Elements */
+
+section, article, aside, footer, header, nav, hgroup {
+  display: block;
+}
+
+/*clearfix*/
+
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* Accessability */
+
+.element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}

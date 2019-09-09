@@ -1,0 +1,150 @@
+<app-bread-crumb [type]="'Brands'"></app-bread-crumb>
+<div class="section-inner">
+    <div id="content">
+        <h2 class="entry-title">Contact Lens Brands</h2>
+        <article id="page">
+            <div class="entry-content">
+                <ul class="brands-listing">
+                    <!-- Acuvue -->
+                    <li>
+                        <div>
+                            <a routerLink="/brands/Acuvue">
+                                <img
+                                    class="alignnone size-full"
+                                    src="../../assets/images/megamenu/logo-acuvue.png"
+                                    alt="logo-acuvue"
+                                    width="100"
+                                    height="71"
+                                >
+                            </a>
+                        </div>
+                        <div>
+                            <div class="woocommerce columns-4 products">
+                                <mat-grid-list cols="4" rowHeight="1:1.5">
+                                    <mat-grid-tile *ngFor="let product of acuvue">
+                                        <app-product [product]="product"></app-product>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- AIR OPTIX -->
+                    <li>
+                        <div>
+                            <a routerLink="/brands/AIR OPTIX">
+                                <img
+                                    class="alignnone size-full"
+                                    src="../../assets/images/megamenu/logo-air-optix.png"
+                                    alt="logo-air-optix"
+                                    width="117"
+                                    height="71"
+                                >
+                            </a>
+                        </div>
+                        <div>
+                            <div class="woocommerce columns-4 products">
+                                <mat-grid-list cols="4" rowHeight="1:1.5">
+                                    <mat-grid-tile *ngFor="let product of airOptix">
+                                        <app-product [product]="product"></app-product>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- DAILIES -->
+                    <li>
+                        <div>
+                            <a routerLink="/brands/DAILIES">
+                                <img
+                                    class="alignnone size-full"
+                                    src="../../assets/images/megamenu/logo-dailies.png"
+                                    alt="logo-dailies"
+                                    width="97"
+                                    height="71"
+                                >
+                            </a>
+                        </div>
+                        <div>
+                            <div class="woocommerce columns-4 products">
+                                <mat-grid-list cols="4" rowHeight="1:1.5">
+                                    <mat-grid-tile *ngFor="let product of dailies">
+                                        <app-product [product]="product"></app-product>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Bausch & Lomb -->
+                    <li>
+                        <div>
+                            <a routerLink="/brands/Bausch & Lomb">
+                                <img
+                                    class="alignnone size-full"
+                                    src="../../assets/images/megamenu/logo-bausch-lomb.png"
+                                    alt="logo-bausch-lomb"
+                                    width="125"
+                                    height="71"
+                                >
+                            </a>
+                        </div>
+                        <div>
+                            <div class="woocommerce columns-4 products">
+                                <mat-grid-list cols="4" rowHeight="1:1.5">
+                                    <mat-grid-tile *ngFor="let product of bauschLomb">
+                                        <app-product [product]="product"></app-product>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- CooperVision -->
+                    <li>
+                        <div>
+                            <a routerLink="/brands/CooperVision">
+                                <img
+                                    class="alignnone size-full"
+                                    src="../../assets/images/megamenu/logo-coopervision.png"
+                                    alt="logo-coopervision"
+                                    width="125"
+                                    height="71"
+                                >
+                            </a>
+                        </div>
+                        <div>
+                            <div class="woocommerce columns-4 products">
+                                <mat-grid-list cols="4" rowHeight="1:1.5">
+                                    <mat-grid-tile *ngFor="let product of cooperVision">
+                                        <app-product [product]="product"></app-product>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- FreshLook -->
+                    <li>
+                        <div>
+                            <a routerLink="/brands/FreshLook">
+                                <img
+                                    class="alignnone size-full"
+                                    src="../../assets/images/megamenu/logo-freshlook.png"
+                                    alt="logo-freshlook"
+                                    width="110"
+                                    height="71"
+                                >
+                            </a>
+                        </div>
+                        <div>
+                            <div class="woocommerce columns-4 products">
+                                <mat-grid-list cols="4" rowHeight="1:1.5">
+                                    <mat-grid-tile *ngFor="let product of freshLook">
+                                        <app-product [product]="product"></app-product>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>

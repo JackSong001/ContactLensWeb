@@ -1,0 +1,9 @@
+.section-inner {
+    width: 70%;
+}
+
+.rightTop-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}

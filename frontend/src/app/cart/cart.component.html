@@ -1,0 +1,105 @@
+<app-bread-crumb [type]="'Cart'"></app-bread-crumb>
+
+<div class="table-container" *ngIf="dataSource; else alterInfo">
+    <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="img">
+            <mat-header-cell *matHeaderCellDef>
+                PRODUCT
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order">
+
+                <a routerLink="/products/{{order.name}}">
+                    <img style="width: 100%" src="../../assets/images/products/{{order.img}}"
+                        class="attachment-shop_catalog wp-post-image" [alt]="order.img">
+                </a>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef>
+                NAME
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order">
+                {{order.name}}
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="bc">
+            <mat-header-cell *matHeaderCellDef>
+                BC
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order">
+                {{order.bc}}
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="pwr">
+            <mat-header-cell *matHeaderCellDef>
+                PWR
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order">
+                {{order.pwr}}
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="qty">
+            <mat-header-cell *matHeaderCellDef>
+                QTY
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order">
+                {{order.qty}}
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+            <mat-header-cell *matHeaderCellDef>
+                PRICE
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order">
+                ${{order.price}}
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+            <mat-header-cell *matHeaderCellDef>
+                DELETE
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order; let idx = index">
+                <button mat-icon-button color="warn" (click)="removeOne(idx)">
+                    <mat-icon>remove_shopping_cart</mat-icon>
+                </button>
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <div class="button-wrapper">
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <mat-form-field>
+                    <span matPrefix>SUBTOTAL： &nbsp;USD $</span>
+                    <input matInput [value]="getSubTotle()" disabled>
+                </mat-form-field>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-form-field>
+                    <span matPrefix>SHIPPING: &nbsp;USD $</span>
+                    <input matInput value="10.50" disabled>
+                </mat-form-field>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-form-field>
+                    <span matPrefix>TOTAL: &nbsp;USD $</span>
+                    <input matInput [value]="getTotle()" disabled>
+                </mat-form-field>
+            </mat-list-item>
+        </mat-list>
+        <button mat-raised-button color="primary" (click)="checkOut()">Proceed to Checkout</button>
+    </div>
+</div>
+<ng-template #alterInfo>
+    <div class="table-container alterInfo">Shopping cart is currently empty</div>
+</ng-template>
+
+<div class="loading-mask" *ngIf="loading">
+    <mat-spinner class="loading"></mat-spinner>
+</div>

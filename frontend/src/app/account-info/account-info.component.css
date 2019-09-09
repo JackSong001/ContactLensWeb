@@ -1,0 +1,22 @@
+.accountInfo-container {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 24px;
+}
+
+mat-form-field{
+    width: 40%;
+
+}
+
+h3 {
+    padding: 5% 0;
+}
+
+.personal-wrapper  mat-form-field {
+    display: block;
+}
+
+.mat-radio-button {
+    width: 8vh;
+}

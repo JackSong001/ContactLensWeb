@@ -1,0 +1,81 @@
+<div class="accountInfo-container">
+    <form [formGroup]="accountForm" (ngSubmit)="updateUserInfo()" >
+        <div>
+            <h3>Account</h3>
+            <mat-form-field>
+                <input matInput placeholder="Email" required formControlName="email">
+                <mat-error *ngIf="!accountForm.email?.valid">Please give a valid email</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" required formControlName="password">
+                <mat-error *ngIf="!accountForm.password?.valid">Please input password</mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <h3>Address</h3>
+            <mat-form-field>
+                <input matInput placeholder="firstName" required formControlName="firstName">
+                <mat-error *ngIf="!accountForm.firstName?.valid">First Name is Required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="lastName" required formControlName="lastName">
+                <mat-error *ngIf="!accountForm.lastName?.valid">Last Name is Required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="country" required formControlName="country">
+                <mat-error *ngIf="!accountForm.country?.valid">Country is Required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="address" required formControlName="address">
+                <mat-error *ngIf="!accountForm.address?.valid">Address is Required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="city" required formControlName="city">
+                <mat-error *ngIf="!accountForm.city?.valid">City is Required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>State</mat-label>
+                <mat-select required formControlName="state">
+                    <mat-option disabled> None </mat-option>
+                    <mat-option *ngFor="let state of states" [value]="state.abbreviation">
+                        {{state.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="!accountForm.state?.valid">Please choose a state</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="zip" required formControlName="zip">
+                <mat-error *ngIf="!accountForm.zip?.valid">Zip code is Required</mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <h3>Personal</h3>
+            <div class="personal-wrapper">
+                <mat-form-field>
+                    <input matInput placeholder="phone" required formControlName="phone">
+                    <mat-error *ngIf="!accountForm.phone?.valid">Cell Phone Number is Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker1" placeholder="Birth Day" required formControlName="bod">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                    <mat-error *ngIf="!accountForm.bod?.valid">Birth Day is Required</mat-error>
+                </mat-form-field>
+                <p>Gender</p>
+                <mat-radio-group aria-label="Select an option" required formControlName="gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <ng-container>
+                <p>Receive emails from us</p>
+                <mat-checkbox formControlName="receive">receive</mat-checkbox>
+                <p>You can not change your address for completed orders. If the matter is urgent, please contact
+                    customer
+                    support for assistance.
+                </p>
+            </ng-container>
+        </div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="accountForm.invalid">SEND</button>
+    </form>
+</div>

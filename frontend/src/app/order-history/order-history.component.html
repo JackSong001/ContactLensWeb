@@ -1,0 +1,72 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let order of orderList">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+            Order date: {{order.date |  date:"M/d/yy, h:mm a"}}
+        </mat-panel-title>
+        <mat-panel-description>
+            Totle: ${{order.price}}
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-table [dataSource]="order.orders">
+                <ng-container matColumnDef="img">
+                    <mat-header-cell *matHeaderCellDef>
+                        PRODUCT
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let order">
+        
+                        <a routerLink="/products/{{order.name}}">
+                            <img style="width: 100%" src="../../assets/images/products/{{order.img}}"
+                                class="attachment-shop_catalog wp-post-image" [alt]="order.img">
+                        </a>
+                    </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef>
+                        NAME
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let order">
+                        {{order.name}}
+                    </mat-cell>
+                </ng-container>
+        
+                <ng-container matColumnDef="bc">
+                    <mat-header-cell *matHeaderCellDef>
+                        BC
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let order">
+                        {{order.bc}}
+                    </mat-cell>
+                </ng-container>
+        
+                <ng-container matColumnDef="pwr">
+                    <mat-header-cell *matHeaderCellDef>
+                        PWR
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let order">
+                        {{order.pwr}}
+                    </mat-cell>
+                </ng-container>
+        
+                <ng-container matColumnDef="qty">
+                    <mat-header-cell *matHeaderCellDef>
+                        QTY
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let order">
+                        {{order.qty}}
+                    </mat-cell>
+                </ng-container>
+        
+                <ng-container matColumnDef="price">
+                    <mat-header-cell *matHeaderCellDef>
+                        PRICE
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let order">
+                        ${{order.price}}
+                    </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+    </mat-expansion-panel>
+</mat-accordion>

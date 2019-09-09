@@ -1,0 +1,35 @@
+<div id="breadcrumb">
+    <div class="section-inner" [ngSwitch]="type">
+        <div *ngIf="type=='Brands'" class="breadcrumb-wrapper">
+            <h1>Contact Lens Brands</h1>
+        </div>
+        <div *ngIf="type=='Cart'" class="breadcrumb-wrapper">
+            <h1>Shopping Cart</h1>
+        </div>
+        <div *ngIf="type=='Login'" class="breadcrumb-wrapper">
+            <h1> Customer Service <span>&gt;</span> My Account <span>&gt;</span> Login</h1>
+        </div>
+        <div *ngIf="type=='Account'" class="breadcrumb-wrapper">
+            <h1> Customer Service <span>&gt;</span>Account Infomation</h1>
+        </div>
+        <div *ngIf="type=='Register'" class="breadcrumb-wrapper">
+            <h1> Customer Service <span>&gt;</span>Registion</h1>
+        </div>
+        <div *ngIf="type=='Sale'" class="breadcrumb-wrapper">
+                <h1> Contact Lenses <span>&gt;</span>Sale</h1>
+            </div>
+        <div *ngIf="type && type !=='Brands' && type !== 'Cart' && type !== 'Login' && type !== 'Account' && type !== 'Register' && type !== 'Sale'"
+            class="breadcrumb-wrapper">
+            <h1>{{type}} Contact Lens</h1>
+        </div>
+        <div *ngIf="!type" class="breadcrumb-wrapper">
+            <ng-container *ngFor="let item of typeList">
+                <a routerLink="/{{item | lowercase }}">{{item}} Contact Lenses</a>
+                <span>&gt;</span>
+            </ng-container>
+            <a routerLink="/brands/{{brand}}">{{brand}} Contact Lenses</a>
+            <span>&gt;</span>
+            {{name}}
+        </div>
+    </div>
+</div>

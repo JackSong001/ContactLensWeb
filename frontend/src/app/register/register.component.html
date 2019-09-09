@@ -1,0 +1,29 @@
+<app-bread-crumb [type]="'Register'"></app-bread-crumb>
+<div id="main" class="page-section">
+    <div class="section-inner">
+        <div id="content">
+            <article class="page">
+                <div class="entry-content">
+                    <!--div class="main_ttl2">Registration</div-->
+                    <h1 class="entry-title">Registration</h1>
+                    <h2>How to register</h2>
+                    <p>
+                        1. Fill in the boxes below and click "Send".<br>
+                        2. We, LensPure will send an Email to the Email address entered.<br>
+                        3. Just click the link in the Email to open an authentication page, and the registration is
+                        completed!<br>
+                        <br>
+                        Email address authentication is needed when registering.<br>
+                        If you are setting mail rejection, please unset it and then click the "Send" button.
+                    </p>
+                    <div class="woocommerce">
+                            <app-account-info [isRegister]="'isRegister'" (loadingChange)="onLoading($event)"></app-account-info>
+                    </div>
+                    <div class="loading-mask" *ngIf="loading">
+                        <mat-spinner class="loading"></mat-spinner>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

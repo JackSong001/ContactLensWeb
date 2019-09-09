@@ -1,0 +1,15 @@
+[{
+    "email": "xsong120394@gmail.com",
+    "password": "123456",
+    "firstName": "xuxin",
+    "lastName": "song",
+    "country": "USA",
+    "address": "400 Cedar Avenue",
+    "city": "West Long Branch",
+    "state": "New Jersey",
+    "zip": "07764",
+    "phone": "1231231234",
+    "bod": "1560841200000",
+    "gender": "malse",
+    "receive": "true"
+}]

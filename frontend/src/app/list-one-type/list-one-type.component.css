@@ -1,0 +1,14 @@
+mat-divider {
+    margin: 20px 0;
+}
+
+.mat-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    font: 100 12px/12px Roboto,"Helvetica Neue",sans-serif;
+}
+
+.sort-wrapper {
+    width: 20%;
+    margin-right: 10%; 
+}

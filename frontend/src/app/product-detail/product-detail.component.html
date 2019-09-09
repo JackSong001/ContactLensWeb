@@ -1,0 +1,148 @@
+<app-bread-crumb [productInfo]="product" *ngIf="product"></app-bread-crumb>
+<div class="product-summary section-inner">
+    <h1 class="product_title entry-title">
+        {{product?.name}} <span>Contact Lenses</span>
+    </h1>
+    <div class="desp-container">
+        <div class="summary">
+            <div id="brief">{{product?.brief}}</div>
+            <span>
+                <div class="amount">
+                    <span>USD</span>
+                    <span [class]="product?.dealPrice ? 'price-del' : 'price-style'">${{product?.fullPrice}}</span>
+                </div>
+                <div class="amount" *ngIf="product?.dealPrice">
+                    <span>USD</span>
+                    <span class="price-style">${{product?.dealPrice}}</span>
+                </div>
+            </span>
+        </div>
+        <div class="images">
+            <a
+                href="../../assets/images/products/{{product?.img[0]}}"
+                class="woocommerce-main-image zoom"
+                title
+                data-rel="prettyPhoto"
+            >
+                <img
+                    src="../../assets/images/products/{{product?.img[0]}}"
+                    class="attachment-shop_single"
+                    [alt]="product?.name"
+                    [title]="product?.name"
+                >
+            </a>
+        </div>
+    </div>
+</div>
+<div class="shopping-container">
+    <div class="product-details section-inner">
+        <h3 class="section-title">Order Information</h3>
+        <div class="input-wrapper">
+            <div style="width: 60%">
+                <mat-grid-list cols="4" rowHeight="50px">
+                    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">BC/DIA</mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">PWR</mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">QTY</mat-grid-tile>  
+
+                    <mat-grid-tile colspan="1" rowspan="1">RIGHT EYES</mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <mat-form-field class="selection-container">
+                            <mat-select [(ngModel)]= "rBC">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let bc of product?.bc" [value]="bc">
+                                    {{bc}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <mat-form-field  class="selection-container">
+                            <mat-select [(ngModel)]= "rPWR">
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let p of pwr" [value]="p">{{p}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <mat-form-field  class="selection-container">
+                            <mat-select [(ngModel)]= "rQTY">
+                                <mat-option>None</mat-option>
+                            <mat-option *ngFor="let item of qty" [value]="item">{{item}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-grid-tile>      
+                    
+                    <mat-grid-tile colspan="1" rowspan="1">LEFT EYES</mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <mat-form-field  class="selection-container">
+                            <mat-select [(ngModel)]= "lBC">
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let bc of product?.bc" [value]="bc">{{bc}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <mat-form-field  class="selection-container">
+                            <mat-select [(ngModel)]= "lPWR">
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let item of pwr" [value]="item">{{item}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <mat-form-field  class="selection-container">
+                            <mat-select [(ngModel)]= "lQTY">
+                                <mat-option>None</mat-option>
+                            <mat-option *ngFor="let item of qty" [value]="item">{{item}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-grid-tile>   
+                </mat-grid-list>
+            </div>
+            <div style="width:30%">
+                <button mat-raised-button color="warn" (click)="addToCart()">Submit</button>
+            </div>
+    </div>
+    </div>
+</div>
+<div class="product-details section-inner">
+    <div
+        class="additional_info bottom_padding"
+        id="tab-custom_additional_information"
+    >
+        <div class="section-title">Additional Information</div>
+        <p>
+            <strong>Type:</strong>
+            <ng-container *ngFor="let type of product?.type"> {{type | titlecase }} Contact Lenses</ng-container>
+        </p>
+        <p>
+            <strong>Packaging:</strong>
+            {{product?.packaging}}
+        </p>
+        <p>
+            <strong>Content:</strong>
+            {{product?.content}}
+        </p>
+        <p>
+            <strong>Manufacturer:</strong>
+            {{product?.manufacturer}}
+        </p>
+    </div>
+
+    <div id="tab-description" class="bottom_padding">
+        <div class="section-title">Description</div>
+        <p *ngFor="let desc of product?.description">
+            {{desc}}
+        </p>
+    </div>
+
+    <div id="tab-description" class="bottom_padding" *ngIf="relatedProds">
+        <div class="section-title">Related Products</div>
+        <mat-grid-list cols="3" rowHeight="1.5:1">
+            <mat-grid-tile *ngFor="let product of relatedProds">
+                <app-product [product]="product" style="width:80%"></app-product>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>

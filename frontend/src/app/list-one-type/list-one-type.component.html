@@ -1,0 +1,30 @@
+<div id="content">
+    <div id="header-filter">
+        <mat-toolbar>
+            <div class="sort-wrapper">
+                sort by:
+                <mat-radio-group aria-label="Select an option" [value]="sortBy" (change)="sortProduct($event.value)">
+                    <mat-radio-button value="price">Price</mat-radio-button>
+                    <mat-radio-button value="name">Name</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </mat-toolbar>
+    </div>
+    <div id="product-listing">
+        <div class="product-listing-head section-inner">
+            <p class="woocommerce-result-count">
+                <span class="category-link"></span>
+                Found {{products.length}} products
+            </p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="product-listing-main section-inner" style="width: 50;">
+            <mat-grid-list cols="3" rowHeight="1.5:1">
+                <mat-grid-tile *ngFor="let product of products">
+                    <app-product [product]="product" [isType]="true" style="width: 60%"></app-product>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+        <div class="wc-nav section-inner"></div>
+    </div>
+</div>

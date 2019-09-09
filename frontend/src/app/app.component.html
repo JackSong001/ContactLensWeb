@@ -1,0 +1,785 @@
+<div>
+    <nav
+        id="mainnav"
+        class="nav"
+    >
+        <div class="section-inner">
+            <div
+                id="mega-menu-wrap-primary"
+                class="mega-menu-wrap"
+            >
+                <div class="mega-menu-toggle"></div>
+                <ul
+                    id="mega-menu-primary"
+                    class="mega-menu mega-menu-horizontal"
+                >
+                    <!-- Brands -->
+                    <li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-megamenu">
+                        <a
+                            class="mega-menu-link"
+                            routerLink="/list"
+                            (mouseover)="showDropdown = 'Brands'"
+                        >
+                            Brands
+                        </a>
+                        <ul
+                            class="mega-sub-menu"
+                            [style.display]="showDropdown == 'Brands' ? 'block':'none'"
+                            (mouseleave)="showDropdown = ''"
+                        >
+                            <li>
+                                <a
+                                    class="mega-menu-link"
+                                    routerLink="/brands/Acuvue"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-acuvue.png"
+                                        alt="ACUVUE"
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="mega-menu-link"
+                                    routerLink="/brands/AIR OPTIX"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-air-optix.png"
+                                        alt="AirOptix"
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="mega-menu-link"
+                                    routerLink="/brands/DAILIES"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-dailies.png"
+                                        alt="DAILIES"
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="mega-menu-link"
+                                    routerLink="/brands/Bausch & Lomb"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-bausch-lomb.png"
+                                        alt="BAUSCH+LOMB"
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="mega-menu-link"
+                                    routerLink="/brands/CooperVision"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-coopervision.png"
+                                        alt="CooperVision"
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="mega-menu-link"
+                                    routerLink="/brands/FreshLook"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-freshlook.png"
+                                        alt="FRESHLOOK"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-clear">
+                                <div class="textwidget">
+                                    <div class="L2-title">Brands</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Daily -->
+                    <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children mega-align-bottom-left mega-menu-megamenu">
+                        <a
+                            class="mega-menu-link"
+                            routerLink="/daily"
+                            (mouseover)="showDropdown = 'Daily'"
+                        >
+                            Daily
+                        </a>
+                        <ul
+                            class="mega-sub-menu"
+                            [style.display]="showDropdown == 'Daily' ? 'block':'none'"
+                            (mouseleave)="showDropdown = ''"
+                        >
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/1/brandId/1/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-acuvue.png"
+                                        alt="ACUVUE"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/J1M/"
+                                        >
+                                            1 Day Acuvue Moist
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/J1T/"
+                                        >
+                                            1-Day Acuvue TruEye
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/JOS190/"
+                                        >
+                                            ACUVUE OASYS 1-DAY WITH HYDRALUXE 90 Pack
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/J1MD/"
+                                        >
+                                            1 Day Acuvue Define Accent Style with LACREON
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom">
+                                <a class="mega-menu-link">
+                                    <img
+                                        src="../assets/images/megamenu/logo-air-optix-grey.png"
+                                        alt="AirOptix"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/1/brandId/13/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-dailies.png"
+                                        alt="DAILIES"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/C1N/"
+                                        >
+                                            Focus Dailies
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/C1A/"
+                                        >
+                                            DAILIES AquaComfort Plus
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/C1T/"
+                                        >
+                                            Dailies Total 1
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/1/brandId/3/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-bausch-lomb.png"
+                                        alt="BAUSCH+LOMB"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B1N/"
+                                        >
+                                            SofLens One Day
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B1D/"
+                                        >
+                                            NATURELLE PUREBLACK
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B1V/"
+                                        >
+                                            NATURELLE ELEGANTBROWN
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B1T/"
+                                        >
+                                            Biotrue One Day
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/1/brandId/4/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-coopervision.png"
+                                        alt="CooperVision"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/CP1/"
+                                        >
+                                            Proclear 1 Day
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/1/brandId/14/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-freshlook.png"
+                                        alt="FRESHLOOK"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/FL1/"
+                                        >
+                                            FreshLook One-Day
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-clear">
+                                <div class="textwidget">
+                                    <div class="L2-title">Daily Contact Lenses</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Weekly -->
+                    <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children mega-align-bottom-left mega-menu-megamenu">
+                        <a
+                            class="mega-menu-link"
+                            routerLink="/weekly"
+                            (mouseover)="showDropdown = 'Weekly'"
+                        >
+                        Weekly
+                        </a>
+                        <ul
+                            class="mega-sub-menu"
+                            [style.display]="showDropdown == 'Weekly' ? 'block':'none'"
+                            (mouseleave)="showDropdown = ''"
+                        >
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/2/brandId/1/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-acuvue.png"
+                                        alt="ACUVUE"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/J2/"
+                                        >
+                                            Acuvue 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/JOS/"
+                                        >
+                                            Acuvue Oasys
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/J2V/"
+                                        >
+                                            2-Week Acuvue Define
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/2/brandId/12/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-air-optix.png"
+                                        alt="AirOptix"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/CO2/"
+                                        >
+                                            O2 Optix
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom">
+                                <a class="mega-menu-link">
+                                    <img
+                                        src="../assets/images/megamenu/logo-dailies-grey.png"
+                                        alt="DAILIES"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/2/brandId/3/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-bausch-lomb.png"
+                                        alt="BAUSCH+LOMB"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B4/"
+                                        >
+                                            SofLens 59
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/2/brandId/4/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-coopervision.png"
+                                        alt="CooperVision"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/O55/"
+                                        >
+                                            Biomedics 55 Evolution
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/2/brandId/14/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-freshlook.png"
+                                        alt="FRESHLOOK"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/FLB/"
+                                        >
+                                            FreshLook ColorBlends
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-clear">
+                                <div class="textwidget">
+                                    <div class="L2-title">Weekly Contact Lenses</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Monthly -->
+                    <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children mega-align-bottom-left mega-menu-megamenu">
+                        <a
+                            class="mega-menu-link"
+                            routerLink="/monthly"
+                            (mouseover)="showDropdown = 'Monthly'"
+                        >
+                        Monthly
+                        </a>
+                        <ul
+                            class="mega-sub-menu"
+                            [style.display]="showDropdown == 'Monthly' ? 'block':'none'"
+                            (mouseleave)="showDropdown = ''"
+                        >
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/3/brandId/1/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-acuvue.png"
+                                        alt="Acuvue"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/JVA/"
+                                        >
+                                            Acuvue Vita
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/3/brandId/12/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-air-optix.png"
+                                        alt="AirOptix"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/CH2/"
+                                        >
+                                            AIR OPTIX HYDRAGLYDE
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/CA2/"
+                                        >
+                                            Air Optix Aqua
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/CAND/"
+                                        >
+                                            Air Optix Night &amp; Day Aqua
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom">
+                                <a class="mega-menu-link">
+                                    <img
+                                        src="../assets/images/megamenu/logo-dailies-grey.png"
+                                        alt="DAILIES"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/3/brandId/3/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-bausch-lomb.png"
+                                        alt="BAUSCH+LOMB"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B2U/"
+                                        >
+                                            ULTRA
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B2/"
+                                        >
+                                            SofLens 38
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/3/brandId/4/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-coopervision.png"
+                                        alt="CooperVision"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/CPB/"
+                                        >
+                                            Biofinity
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom">
+                                <a class="mega-menu-link">
+                                    <img
+                                        src="../assets/images/megamenu/logo-freshlook-grey.png"
+                                        alt="FRESHLOOK"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-clear">
+                                <div class="textwidget">
+                                    <div class="L2-title">Monthly Contact Lenses</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Color -->
+                    <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children mega-align-bottom-left mega-menu-megamenu">
+                        <a
+                            class="mega-menu-link"
+                            routerLink="/color"
+                            (mouseover)="showDropdown = 'Color'"
+                        >
+                        Color
+                        </a>
+                        <ul
+                            class="mega-sub-menu"
+                            [style.display]="showDropdown == 'Color' ? 'block':'none'"
+                            (mouseleave)="showDropdown = ''"
+                        >
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/4/brandId/1/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-acuvue.png"
+                                        alt="ACUVUE"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/J2V/"
+                                        >
+                                            2-Week Acuvue Define
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/J1MD/"
+                                        >
+                                            1 Day Acuvue Define Accent Style with LACREON
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom">
+                                <a class="mega-menu-link">
+                                    <img
+                                        src="../assets/images/megamenu/logo-air-optix-grey.png"
+                                        alt="AirOptix"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-clear">
+                                <a class="mega-menu-link">
+                                    <img
+                                        src="../assets/images/megamenu/logo-dailies-grey.png"
+                                        alt="DAILIES"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/4/brandId/3/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-bausch-lomb.png"
+                                        alt="BAUSCH+LOMB"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B1D/"
+                                        >
+                                            NATURELLE PUREBLACK
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/B1V/"
+                                        >
+                                            NATURELLE ELEGANTBROWN
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom">
+                                <a class="mega-menu-link">
+                                    <img
+                                        src="../assets/images/megamenu/logo-coopervision-grey.png"
+                                        alt="CooperVision"
+                                    >
+                                </a>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product_cat mega-menu-item-has-children">
+                                <a
+                                    class="mega-menu-link"
+                                    href="https://www.lenspure.com/productlist/filter/categoryId/4/brandId/14/"
+                                >
+                                    <img
+                                        src="../assets/images/megamenu/logo-freshlook.png"
+                                        alt="FRESHLOOK"
+                                    >
+                                </a>
+                                <ul class="mega-sub-menu">
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/FL1/"
+                                        >
+                                            FreshLook One-Day
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="mega-menu-link"
+                                            href="https://www.lenspure.com/goods/index/gc/FLB/"
+                                        >
+                                            FreshLook ColorBlends
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-clear">
+                                <div class="textwidget">
+                                    <div class="L2-title">Color Contact Lenses</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout">
+                        <a
+                            class="mega-menu-link"
+                            routerLink="/list"
+                            (mouseover)="showDropdown = ''"
+                        >
+                            Sale
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header right -->
+    <div class="h-w2 section-inner">
+        <a
+            routerLink="/home"
+            routerLinkActive="active"
+            id="logo"
+            (mouseover)="showDropdown = ''"
+        >
+            <img
+                src="./../assets/images/logo_header.png"
+                alt="Logo"
+            >
+        </a>
+        <div id="header-banner"></div>
+        <div id="util" (mouseover)="showDropdown = ''">
+            <ul class="rightTop-wrapper">
+                <li>
+                    <button mat-icon-button (click)="accountLogin()"><mat-icon>perm_identity</mat-icon></button>
+                </li>
+                <li >
+                    <a mat-icon-button routerLink="/cart"><mat-icon>shopping_cart</mat-icon></a>
+                </li>
+                <li class="search">
+                    <button mat-icon-button (click)="searchResult()"><mat-icon>search</mat-icon></button>
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                            <input type="text" aria-label="Assignee" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option.name}}
+                            </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

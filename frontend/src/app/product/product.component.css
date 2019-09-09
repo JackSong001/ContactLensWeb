@@ -1,0 +1,20 @@
+.mat-card-content {
+  min-height: 150px;
+}
+
+p {
+  word-break:break-all;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+h3 {
+  width: 100%;
+  float: none;
+  font-weight: 500;
+  color: #58a7c6;
+}
